@@ -72,8 +72,8 @@ class Transaction(object):
         private_key = SigningKey.from_string(
             bytes().fromhex(self.sender_private_key), curve=NIST256p)
         private_key_sign = private_key.sign(message)
-        sigunature = private_key_sign.hex()
-        return sigunature
+        signature = private_key_sign.hex()
+        return signature
 
 
 if __name__ == '__main__':
